@@ -1,0 +1,57 @@
+@import 'reset';
+@import 'ember-paper';
+
+$eurekai-blue: #1e2642;
+$eurekai-purple: #e06fe7;
+
+html {
+	font-size: 8px;
+	height: 100vh;
+}
+
+body {
+	height: 100%;
+}
+
+.login__container {
+	background-color: $eurekai-blue;
+	height: 100vh;
+}
+
+.login__logo {
+	color: $eurekai-purple;
+	font-size: 6rem;
+	font-family: 'Ubuntu', sans-serif;
+	z-index: 2;
+}
+
+.login__start {
+	background-color: white;
+	border: none;
+	color: black;
+	outline: none;
+}
+
+.login__particles {
+	position: absolute;
+}
+
+
+.tools__container {
+	height: 100vh;
+}
+
+.tools__header {
+	background-color: $eurekai-blue;
+	color: white;
+	height: 5vh;
+	padding: 2rem;
+}
+
+.header__logo {
+	font-size: 3rem;
+}
+
+.header__profile {
+	font-size: 3rem;
+}
