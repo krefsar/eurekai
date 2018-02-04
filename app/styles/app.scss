@@ -91,7 +91,6 @@ a {
 	height: 70vh;
 	color: white;
 	background-color: $eurekai-sky;
-	font-size: 4rem;
 	border-radius: 3rem;
 	font-family: "Merriweather", serif;
 }
@@ -106,4 +105,29 @@ a {
 
 .tool-slide__container {
 	height: 100%;
+	padding: 3rem;
+	border: 6px solid $eurekai-darkpurple;
+	border-radius: 3rem;
+	transition: 0.2s;
+
+	&:hover {
+		border-color: white;
+		transition: 0.2s;
+	}
+}
+
+.slide-main {
+	text-align: center;
+	font-size: 4rem;
+}
+
+.slide-sub {
+	font-size: 3rem;
+	margin: 3rem 0;
+	position: absolute;
+	bottom: 0px;
+}
+
+.tool-slide__title {
+	font-size: 3rem;
 }
