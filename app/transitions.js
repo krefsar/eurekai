@@ -18,7 +18,7 @@ export default function(){
 
 	this.transition(
 		this.fromRoute('tools.index'),
-		this.toRoute('tools.cherry-split'),
+		this.toRoute('tools.lotus-blossom'),
 		this.use('toUp'),
 		this.reverse('toDown')
 	);

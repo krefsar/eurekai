@@ -1,13 +1,59 @@
 <div class='lotus__container layout-column'>
 	<div class='flex'>
-		{{outlet}}
+
 	</div>
 
+		{{#if false}}
+		{{#paper-dialog class="flex-50 tutorial" onClose=(action "closeModal") clickOutsideToClose=true}}
+				{{#paper-toolbar}}
+		        {{#paper-toolbar-tools class='tutorial__title layout-row layout-align-center-center'}}
+		          <h2>Welcome to Lotus Blossom!</h2>
+		        {{/paper-toolbar-tools}}
+		      {{/paper-toolbar}}
+	      {{#paper-dialog-content}}
+
+	          <p class='tutorial__body'>
+							Lotus Blossom was invented by <span class='strong'>Yasuo Matsumura</span> and has since become a favorite brainstorming tool for many successful thinkers.</p>
+							<p class='tutorial__body'>Start by entering your central topic, then write 8 words or phrases that relate to that central topic.</p>
+								<p class='tutorial__body'>As the <span class='strong'>blossom</span> grows, you'll be able to make new associations using angles you never thought of before!</p>
+	      {{/paper-dialog-content}}
+
+	      {{#paper-dialog-actions class="layout-row layout-align-center-center"}}
+	        {{#paper-button onClick=(action "closeModal") class='tutorial__button'}}OK{{/paper-button}}
+	      {{/paper-dialog-actions}}
+	  {{/paper-dialog}}
+		{{/if}}
 	<footer class='lotus-blossom__footer layout-row layout-align-space-between-center'>
 		<h1 class='footer__title'>Lotus Blossom</h1>
 
-		<button class='ai__select'>
-			{{fa-icon 'eye'}}
-		</button>
+	{{#paper-speed-dial
+	  animation='scale' direction='up'
+	  open=aiOpen onToggle=(action (mut aiOpen)) as |dial|}}
+	  {{#dial.trigger}}
+	    {{#paper-button fab=true}}
+				AI
+	    {{/paper-button}}
+	  {{/dial.trigger}}
+
+	  {{#dial.actions as |actions|}}
+	    {{#actions.action}}
+	      {{#paper-button fab=true}}
+					{{fa-icon 'eye' class='floating'}}
+	      {{/paper-button}}
+	    {{/actions.action}}
+
+	    {{#actions.action}}
+	      {{#paper-button fab=true}}
+					{{fa-icon 'camera' class='floating'}}
+	      {{/paper-button}}
+	    {{/actions.action}}
+
+	    {{#actions.action}}
+	      {{#paper-button fab=true}}
+					{{fa-icon 'comment' class='floating'}}
+	      {{/paper-button}}
+	    {{/actions.action}}
+	  {{/dial.actions}}
+	{{/paper-speed-dial}}
 	</footer>
 </div>

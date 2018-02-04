@@ -1,6 +1,20 @@
 <div class='cherry__container layout-column'>
-	<div class='flex'>
+	<div class='flex layout-row'>
+		<div class='layout-column layout-align-space-around-center flex'>
+			{{input value=(mut (jjk))}}
+		</div>
+
+		{{#if (gte step 2)}}
+			<div class='layout-column layout-align-space-around-center flex'>
+			</div>
+
+			{{#if (gte step 3)}}
+				<div class='layout-column layout-align-space-around-center flex'>
+				</div>
+			{{/if}}
+		{{/if}}
 	</div>
+
 	{{outlet}}
 
 	<footer class='cherry__footer layout-row layout-align-space-between-center'>
@@ -10,4 +24,17 @@
 			<img src='../assets/img/textai.png' class='ai__icon' />
 		</div>
 	</footer>
+
+	{{#paper-dialog class="flex-50 tool-tutorial" onClose=(action 'closeModal') clickOutsideToClose=true}}
+    <form>
+      {{#paper-dialog-content}}
+				<h1>Welcome to Double Double!</h1>
+      {{/paper-dialog-content}}
+
+      {{#paper-dialog-actions class="layout-row"}}
+        <span class="flex"></span>
+        {{#paper-button onClick=(action 'closeModal')}}OK{{/paper-button}}
+      {{/paper-dialog-actions}}
+    </form>
+  {{/paper-dialog}}
 </div>

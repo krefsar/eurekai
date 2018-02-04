@@ -1,0 +1,18 @@
+<div class='mirror__container'>
+	{{outlet}}
+
+	{{#if modalOpen}}
+		{{#paper-dialog class="flex-50" onClose=(action "closeModal") clickOutsideToClose=true}}
+	      {{#paper-dialog-content}}
+	          <p>
+	            This is a dialog rendered into a specific element. Clicking outside the dialog will close it.
+	          </p>
+	      {{/paper-dialog-content}}
+
+	      {{#paper-dialog-actions class="layout-row"}}
+	        <span class="flex"></span>
+	        {{#paper-button onClick=(action "closeModal")}}OK{{/paper-button}}
+	      {{/paper-dialog-actions}}
+	  {{/paper-dialog}}
+	{{/if}}
+</div>

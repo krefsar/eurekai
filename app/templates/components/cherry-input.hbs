@@ -1,0 +1,8 @@
+{{input
+		value=(mut (get tree leaf))
+		class='cherry-input'
+		focus-in=(action 'editLeaf')
+		focus-out=(action 'stopEditing')
+		enter=(action finishEditing)}}
+
+{{yield}}

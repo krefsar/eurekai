@@ -23,6 +23,12 @@ a {
 	color: inherit;
 }
 
+hr {
+	color: rgba(255,255,255, 0.2);
+	display: block;
+	width: 100%;
+}
+
 .login__container {
 	background-color: $eurekai-blue;
 	height: 100vh;
@@ -161,4 +167,39 @@ a {
 
 .footer__title {
 	font-size: 3rem;
+}
+
+.cherry__input {
+	color: white;
+	font-size: 3rem;
+}
+
+.mirror__container {
+	background-color: $eurekai-blue;
+	height: 95vh;
+}
+
+.lotus__container {
+	background-color: $eurekai-blue;
+	height: 95vh;
+}
+
+.tutorial__title {
+	font-size: 3rem;
+}
+
+.tutorial__body {
+	font-size: 2rem;
+}
+
+.tutorial__body + .tutorial__body {
+	margin-top: 1.5rem;
+}
+
+.strong {
+	font-weight: 700;
+}
+
+.floating {
+	font-size: 2.5rem;
 }

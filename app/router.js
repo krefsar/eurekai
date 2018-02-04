@@ -8,8 +8,9 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('tools', function() {
-    this.route('lotus-blossom', function() {});
+    this.route('lotus-blossom');
     this.route('cherry-split');
+    this.route('mirror-images');
   });
   this.route('veritone-redirect');
 });
