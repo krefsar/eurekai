@@ -14,6 +14,7 @@
 					<h1 class='input__help'>Enter one or two words loosely related to the center of your blossom, we'll do this 8 times to fill out the center grid:</h1>
 					<h1 class='layout-row layout-align-center-center input__help'>{{get lotusCenter 'value'}}</h1>
 
+						<div class='layout-row layout-align-center-center'>
 					{{#liquid-if (eq step 2) class='stepswipe'}}
 						<span class='step-number'>{{subtract-num step 1}}.</span> {{input value=(mut (get (get lotusCenter 'topLeft') 'value')) class='large-input' enter=(action 'submitLotusCenter')}}
 					{{/liquid-if}}
@@ -23,6 +24,7 @@
 					{{#liquid-if (eq step 4) class='stepswipe'}}
 	<span class='step-number'>{{subtract-num step 1}}.</span> 					{{input value=(mut (get (get lotusCenter 'topRight') 'value')) class='large-input' enter=(action 'submitLotusCenter')}}
 					{{/liquid-if}}
+				</div>
 
 				{{/liquid-if}}
 			</div>

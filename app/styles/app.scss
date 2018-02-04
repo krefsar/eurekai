@@ -267,50 +267,50 @@ hr {
 }
 
 .lotus-cell--blue {
-	background-color: blue;
+	background-color: #b23600;
 	color: white;
 	.lotus-cell {
 		border-color: black;
 	}
 }
 .lotus-cell--green {
-	background-color: green;
+	background-color: #007cb2;
 	color: white;
 	.lotus-cell {
 		border-color: black;
 	}
 }
 .lotus-cell--red {
-	background-color: red;
+	background-color: #b20023;
 	color: white;
 	.lotus-cell {
 		border-color: black;
 	}
 }
 .lotus-cell--yellow {
-	background-color: yellow;
-	color: black;
+	background-color: #00b236;
+	color: white;
 	.lotus-cell {
 		border-color: black;
 	}
 }
 .lotus-cell--purple {
-	background-color: purple;
+	background-color: #b28f00;
 	color: white;
 	.lotus-cell {
 		border-color: black;
 	}
 }
 .lotus-cell--orange {
-	background-color: orange;
-	color: black;
+	background-color: #8f00b2;
+	color: white;
 	.lotus-cell {
 		border-color: black;
 	}
 }
 .lotus-cell--pink {
-	background-color: pink;
-	color: black;
+	background-color: #00b28f;
+	color: white;
 	.lotus-cell {
 		border-color: black;
 	}
@@ -337,8 +337,9 @@ hr {
 
 .input__help + .input__help {
 	margin-top: 2rem;
-	background-color: purple;
+	background-color: #b28f00;
 	padding: 2rem 3rem;
+	margin-bottom: 3rem;
 }
 
 .step-number {
