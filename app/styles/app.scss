@@ -138,3 +138,12 @@ a {
 		margin-top: 4rem;
 	}
 }
+
+.ai__icon {
+	height: 5rem;
+	width: 5rem;
+}
+
+.ai__icon + .ai__icon {
+	margin-left: 2rem;
+}
