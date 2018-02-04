@@ -203,3 +203,42 @@ hr {
 .floating {
 	font-size: 2.5rem;
 }
+
+.ai-dial {
+	position: absolute;
+	right: 3rem;
+	bottom: 3rem;
+}
+
+.input__help {
+	color: white;
+	font-size: 3rem;
+}
+
+.large-input {
+	background: transparent;
+	color: white;
+	font-size: 3rem;
+	border: none;
+	border-bottom: 3px solid white;
+	margin-top: 3rem;
+	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.enter-button {
+	background-color: green;
+	border: 2px solid white;
+	color: white;
+	font-size: 2rem;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	margin-left: 2rem;
+}
+
+.prompt-body {
+	margin-top: 3rem;
+}

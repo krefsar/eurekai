@@ -1,6 +1,16 @@
 <div class='lotus__container layout-column'>
-	<div class='flex'>
-
+	<div class='flex layout-column layout-align-center-center'>
+		{{#if (eq step 1)}}
+			<div class='center-prompt layout-column layout-align-center-center'>
+				<h1 class='input__help'>In a couple of words, what is your challenge?</h1>
+				<div class='layout-row layout-align-space-between-end prompt-body'>
+					{{input value=(mut lotusCenter) class='large-input' enter=(action 'submitLotusCenter')}}
+					<button class='enter-button'>
+						ENTER
+					</button>
+				</div>
+			</div>
+		{{/if}}
 	</div>
 
 		{{#if false}}
@@ -23,12 +33,9 @@
 	      {{/paper-dialog-actions}}
 	  {{/paper-dialog}}
 		{{/if}}
-	<footer class='lotus-blossom__footer layout-row layout-align-space-between-center'>
-		<h1 class='footer__title'>Lotus Blossom</h1>
-
 	{{#paper-speed-dial
 	  animation='scale' direction='up'
-	  open=aiOpen onToggle=(action (mut aiOpen)) as |dial|}}
+	  open=aiOpen onToggle=(action (mut aiOpen)) class='ai-dial' as |dial|}}
 	  {{#dial.trigger}}
 	    {{#paper-button fab=true}}
 				AI
@@ -55,5 +62,4 @@
 	    {{/actions.action}}
 	  {{/dial.actions}}
 	{{/paper-speed-dial}}
-	</footer>
 </div>
