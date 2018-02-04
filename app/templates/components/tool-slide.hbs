@@ -1,6 +1,8 @@
-<div class='flex-60'>
+<div class='flex-60 layout-column layout-align-start-center'>
 	<h1 class='tool-slide__title'>{{title}}</h1>
-	some image
+	<div class='slide__image flex'>
+		<img src={{slideImage}} />
+	</div>
 </div>
 <div class='flex-40 layout-column layout-align-space-between-center'>
 	{{yield}}

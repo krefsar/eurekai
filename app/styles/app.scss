@@ -90,7 +90,7 @@ a {
 .tool__slide {
 	height: 70vh;
 	color: white;
-	background-color: $eurekai-sky;
+	background-color: rgba(30,38,66, 0.98);
 	border-radius: 3rem;
 	font-family: "Merriweather", serif;
 }
@@ -130,4 +130,11 @@ a {
 
 .tool-slide__title {
 	font-size: 3rem;
+}
+
+.slide__image {
+	img {
+		height: 20rem;
+		margin-top: 4rem;
+	}
 }
