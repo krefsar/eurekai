@@ -22,4 +22,9 @@ export default function(){
 		this.use('toUp'),
 		this.reverse('toDown')
 	);
+
+	this.transition(
+		this.hasClass('split-pane'),
+		this.use('toLeft')
+	);
 }

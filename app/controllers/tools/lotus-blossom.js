@@ -10,7 +10,7 @@ export default Controller.extend({
 			this.set('modalOpen', false);
 		},
 		submitLotusCenter() {
-			console.log('done');
+			this.incrementProperty('step');
 		}
 	}
 });

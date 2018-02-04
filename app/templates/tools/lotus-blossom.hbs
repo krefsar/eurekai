@@ -1,7 +1,7 @@
 <div class='lotus__container layout-column'>
-	<div class='flex layout-column layout-align-center-center'>
-		{{#if (eq step 1)}}
-			<div class='center-prompt layout-column layout-align-center-center'>
+	<div class='flex layout-column'>
+		<div class='layout-row flex'>
+			<div class='flex center-prompt layout-column layout-align-center-center'>
 				<h1 class='input__help'>In a couple of words, what is your challenge?</h1>
 				<div class='layout-row layout-align-space-between-end prompt-body'>
 					{{input value=(mut lotusCenter) class='large-input' enter=(action 'submitLotusCenter')}}
@@ -10,7 +10,27 @@
 					</button>
 				</div>
 			</div>
-		{{/if}}
+
+			{{#liquid-unless (eq step 1) class='split-pane'}}
+				<div class='layout-column lotus-table'>
+					<div class='layout-row'>
+						{{lotus-generator isPowered=isPowered center=topLeft}}
+						{{lotus-generator isPowered=isPowered center=top}}
+						{{lotus-generator isPowered=isPowered center=topRight}}
+					</div>
+					<div class='layout-row'>
+						{{lotus-generator isPowered=isPowered center=left}}
+						{{lotus-generator isPowered=isPowered}}
+						{{lotus-generator isPowered=isPowered center=right}}
+					</div>
+					<div class='layout-row'>
+						{{lotus-generator isPowered=isPowered center=bottomLeft}}
+						{{lotus-generator isPowered=isPowered center=bottom}}
+						{{lotus-generator isPowered=isPowered center=bottomRight}}
+					</div>
+				</div>
+			{{/liquid-unless}}
+		</div>
 	</div>
 
 		{{#if false}}
