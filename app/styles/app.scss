@@ -244,7 +244,7 @@ hr {
 }
 
 .lotus-table {
-	width: 50vw;
+	width: 60vw;
 	padding: 1rem;
 }
 
@@ -252,4 +252,101 @@ hr {
 	height: 8rem;
 	width: 8rem;
 	border: 2px solid white;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.cell-body {
+	position: relative;
+	top: 0;
+	height: 100%;
+}
+
+.lotus-generator {
+	margin: 2rem;
+}
+
+.lotus-cell--blue {
+	background-color: blue;
+	color: white;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--green {
+	background-color: green;
+	color: white;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--red {
+	background-color: red;
+	color: white;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--yellow {
+	background-color: yellow;
+	color: black;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--purple {
+	background-color: purple;
+	color: white;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--orange {
+	background-color: orange;
+	color: black;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--pink {
+	background-color: pink;
+	color: black;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--brown {
+	background-color: brown;
+	color: white;
+	.lotus-cell {
+		border-color: black;
+	}
+}
+.lotus-cell--white {
+	background-color: white;
+	color: black;
+
+	.lotus-cell {
+		border-color: black;
+	}
+}
+
+.center-prompt {
+	padding: 2rem;
+}
+
+.input__help + .input__help {
+	margin-top: 2rem;
+	background-color: purple;
+	padding: 2rem 3rem;
+}
+
+.step-number {
+	color: white;
+	font-size: 3rem;
+}
+
+.selected-cell {
+	transition: 0.2s;
+	transform: scale(1.25);
 }

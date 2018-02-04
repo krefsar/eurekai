@@ -1,16 +1,17 @@
-<tr>
-	{{lotus-cell isPowered=isPowered}}
-	{{lotus-cell isPowered=isPowered}}
-	{{lotus-cell isPowered=isPowered}}
-</tr>
-<tr>
-	{{lotus-cell isPowered=isPowered}}
-	{{lotus-cell isPowered=true value=(get center 'value')}}
-	{{lotus-cell isPowered=isPowered}}
-</tr>
-<tr>
-	{{lotus-cell isPowered=isPowered}}
-	{{lotus-cell isPowered=isPowered}}
-	{{lotus-cell isPowered=isPowered}}
-</tr>
+<div class='layout-row'>
+	{{lotus-cell isPowered=isPowered value=(get (get center 'topLeft') 'value')}}
+	{{lotus-cell isPowered=isPowered value=(get (get center 'top') 'value')}}
+	{{lotus-cell isPowered=isPowered value=(get (get center 'topRight') 'value')}}
+</div>
+<div class='layout-row'>
+	{{lotus-cell isPowered=isPowered value=(get (get center 'left') 'value')}}
+	{{log (get center 'value')}}
+	{{lotus-cell isPowered=true value=(get center 'value') click=(action 'selectCell') isSelected=isSelected}}
+	{{lotus-cell isPowered=isPowered value=(get (get center 'right') 'value')}}
+</div>
+<div class='layout-row'>
+	{{lotus-cell isPowered=isPowered value=(get (get center 'bottomLeft') 'value')}}
+	{{lotus-cell isPowered=isPowered value=(get (get center 'bottom') 'value')}}
+	{{lotus-cell isPowered=isPowered value=(get (get center 'bottomRight') 'value')}}
+</div>
 {{yield}}

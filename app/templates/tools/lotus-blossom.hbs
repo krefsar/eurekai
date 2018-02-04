@@ -2,31 +2,47 @@
 	<div class='flex layout-column'>
 		<div class='layout-row flex'>
 			<div class='flex center-prompt layout-column layout-align-center-center'>
-				<h1 class='input__help'>In a couple of words, what is your challenge?</h1>
-				<div class='layout-row layout-align-space-between-end prompt-body'>
-					{{input value=(mut lotusCenter) class='large-input' enter=(action 'submitLotusCenter')}}
-					<button class='enter-button'>
-						ENTER
-					</button>
-				</div>
+				{{#liquid-if (eq step 1)}}
+					<h1 class='input__help'>In a couple of words, what is your challenge?</h1>
+					<div class='layout-row layout-align-space-between-end prompt-body'>
+						{{input value=(mut (get lotusCenter 'value')) class='large-input' enter=(action 'submitLotusCenter')}}
+						<button class='enter-button'>
+							ENTER
+						</button>
+					</div>
+				{{else if (gte step 2)}}
+					<h1 class='input__help'>Enter one or two words loosely related to the center of your blossom, we'll do this 8 times to fill out the center grid:</h1>
+					<h1 class='layout-row layout-align-center-center input__help'>{{get lotusCenter 'value'}}</h1>
+
+					{{#liquid-if (eq step 2) class='stepswipe'}}
+						<span class='step-number'>{{subtract-num step 1}}.</span> {{input value=(mut (get (get lotusCenter 'topLeft') 'value')) class='large-input' enter=(action 'submitLotusCenter')}}
+					{{/liquid-if}}
+					{{#liquid-if (eq step 3) class='stepswipe'}}
+						<span class='step-number'>{{subtract-num step 1}}.</span> {{input value=(mut (get (get lotusCenter 'top') 'value')) class='large-input' enter=(action 'submitLotusCenter')}}
+					{{/liquid-if}}
+					{{#liquid-if (eq step 4) class='stepswipe'}}
+	<span class='step-number'>{{subtract-num step 1}}.</span> 					{{input value=(mut (get (get lotusCenter 'topRight') 'value')) class='large-input' enter=(action 'submitLotusCenter')}}
+					{{/liquid-if}}
+
+				{{/liquid-if}}
 			</div>
 
 			{{#liquid-unless (eq step 1) class='split-pane'}}
 				<div class='layout-column lotus-table'>
 					<div class='layout-row'>
-						{{lotus-generator isPowered=isPowered center=topLeft}}
-						{{lotus-generator isPowered=isPowered center=top}}
-						{{lotus-generator isPowered=isPowered center=topRight}}
+						{{lotus-generator isPowered=true center=(get lotusCenter 'topLeft')}}
+						{{lotus-generator isPowered=true center=(get lotusCenter 'top')}}
+						{{lotus-generator isPowered=true center=(get lotusCenter 'topRight')}}
 					</div>
 					<div class='layout-row'>
-						{{lotus-generator isPowered=isPowered center=left}}
-						{{lotus-generator isPowered=isPowered}}
-						{{lotus-generator isPowered=isPowered center=right}}
+						{{lotus-generator isPowered=isPowered center=(get lotusCenter 'left')}}
+						{{lotus-generator isPowered=true center=lotusCenter}}
+						{{lotus-generator isPowered=isPowered center=(get lotusCenter 'right')}}
 					</div>
 					<div class='layout-row'>
-						{{lotus-generator isPowered=isPowered center=bottomLeft}}
-						{{lotus-generator isPowered=isPowered center=bottom}}
-						{{lotus-generator isPowered=isPowered center=bottomRight}}
+						{{lotus-generator isPowered=isPowered center=(get lotusCenter 'bottomLeft')}}
+						{{lotus-generator isPowered=isPowered center=(get lotusCenter 'bottom')}}
+						{{lotus-generator isPowered=isPowered center=(get lotusCenter 'bottomRight')}}
 					</div>
 				</div>
 			{{/liquid-unless}}
@@ -76,7 +92,7 @@
 	    {{/actions.action}}
 
 	    {{#actions.action}}
-	      {{#paper-button fab=true}}
+	      {{#paper-button fab=true onClick=(action 'enhance')}}
 					{{fa-icon 'comment' class='floating'}}
 	      {{/paper-button}}
 	    {{/actions.action}}

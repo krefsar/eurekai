@@ -27,4 +27,9 @@ export default function(){
 		this.hasClass('split-pane'),
 		this.use('toLeft')
 	);
+
+	this.transition(
+		this.hasClass('stepswipe'),
+		this.use('toLeft')
+	);
 }

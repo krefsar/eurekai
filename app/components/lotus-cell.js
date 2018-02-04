@@ -4,5 +4,7 @@ export default Component.extend({
 	classNames: ['lotus-cell'],
 	tagName: 'td',
 	isPowered: false,
-	value: ''
+	value: '',
+	classNameBindings: ['isSelected:selected-cell'],
+	isSelected: false
 });
