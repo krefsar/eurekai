@@ -9,6 +9,9 @@ export default function(){
 			pickOld: '.login__logo',
 			use: ['toUp', { duration: 1000 }]
 		}, {
+			pickNew: '.slides__container',
+			use: ['wait', 1000, { then: ['toLeft']}]
+		}, {
 			use: ['wait', 500, { then: ['crossFade'] }]
 		})
 	);

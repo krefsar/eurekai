@@ -6,6 +6,7 @@ $eurekai-purple: #e06fe7;
 $eurekai-lightblue: #26408b;
 $eurekai-darkpurple: #7e52a0;
 $eurekai-pink: #d295fb;
+$eurekai-sky: #162834;
 
 html {
 	font-size: 8px;
@@ -89,11 +90,20 @@ a {
 .tool__slide {
 	height: 70vh;
 	color: white;
-	width: 5rem;
-	background-color: red;
+	background-color: $eurekai-sky;
 	font-size: 4rem;
+	border-radius: 3rem;
+	font-family: "Merriweather", serif;
 }
 
 .tool__slide + .tool__slide {
-	margin-left: 2rem;
+	margin-left: 5rem;
+}
+
+.tools-index {
+	height: 95vh;
+}
+
+.tool-slide__container {
+	height: 100%;
 }
