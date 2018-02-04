@@ -1,3 +1,4 @@
+import { later } from '@ember/runloop';
 import Controller from '@ember/controller';
 
 export default Controller.extend({
@@ -141,14 +142,18 @@ export default Controller.extend({
 		closeModal() {
 			this.set('modalOpen', false);
 		},
-		enhance() {
-			console.log('calling enhance');
-			this.set('lotusCenter.topRight.value', 'sauce');
-			this.set('lotusCenter.left.value', 'veggie');
-			this.set('lotusCenter.right.value', 'hot');
-			this.set('lotusCenter.bottomLeft.value', 'buns');
-			this.set('lotusCenter.bottom.value', 'fries');
-			this.set('lotusCenter.bottomRight.value', 'grill');
+		enhancer() {
+			console.log('calling enhancer');
+			this.set('loading', true);
+			later(this, function() {
+				this.set('lotusCenter.topRight.value', 'sauce');
+				this.set('lotusCenter.left.value', 'veggie');
+				this.set('lotusCenter.right.value', 'hot');
+				this.set('lotusCenter.bottomLeft.value', 'buns');
+				this.set('lotusCenter.bottom.value', 'fries');
+				this.set('lotusCenter.bottomRight.value', 'grill');
+				this.set('loading', false);
+			}, 1000);
 		},
 		submitLotusCenter() {
 			this.incrementProperty('step');

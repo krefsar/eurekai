@@ -5,7 +5,6 @@
 </div>
 <div class='layout-row'>
 	{{lotus-cell isPowered=isPowered value=(get (get center 'left') 'value')}}
-	{{log (get center 'value')}}
 	{{lotus-cell isPowered=true value=(get center 'value') click=(action 'selectCell') isSelected=isSelected}}
 	{{lotus-cell isPowered=isPowered value=(get (get center 'right') 'value')}}
 </div>
