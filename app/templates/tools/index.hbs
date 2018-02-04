@@ -1,1 +1,21 @@
+{{#swiper-container currentSlide=currentTool loop=true centered=true slidesPerView=4}}
+  {{#swiper-slide class='tool__slide'}}
+		Tool 1
+	{{/swiper-slide}}
+
+  {{#swiper-slide class='tool__slide'}}
+		Tool 2
+	{{/swiper-slide}}
+
+  {{#swiper-slide class='tool__slide'}}
+		{{#link-to 'tools.lotus-blossom'}}
+			Lotus Blossom
+		{{/link-to}}
+	{{/swiper-slide}}
+
+  {{#swiper-slide class='tool__slide'}}
+		Tool 4
+	{{/swiper-slide}}
+{{/swiper-container}}
+
 {{outlet}}

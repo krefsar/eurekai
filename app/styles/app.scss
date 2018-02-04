@@ -55,3 +55,15 @@ body {
 .header__profile {
 	font-size: 3rem;
 }
+
+.tool__slide {
+	height: 10rem;
+	color: white;
+	width: 5rem;
+	background-color: red;
+	font-size: 4rem;
+}
+
+.tool__slide + .tool__slide {
+	margin-left: 2rem;
+}
