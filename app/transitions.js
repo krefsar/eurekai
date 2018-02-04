@@ -15,4 +15,11 @@ export default function(){
 			use: ['wait', 500, { then: ['crossFade'] }]
 		})
 	);
+
+	this.transition(
+		this.fromRoute('tools.index'),
+		this.toRoute('tools.cherry-split'),
+		this.use('toUp'),
+		this.reverse('toDown')
+	);
 }
