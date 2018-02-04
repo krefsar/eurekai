@@ -1,11 +1,21 @@
-<div class='login__container layout-column layout-align-center-center'>
+<div class='login__container layout-column layout-align-center-center' data-action-bar='back-to-header'>
 	<h1 class='login__logo'>eurek.AI</h1>
 
-	{{#link-to 'tools'}}
-		<button class='login__start'>
-			Get started
+	{{#link-to 'tools' class='login__link'}}
+		<button class='login__button'>
+			Get Started
 		</button>
 	{{/link-to}}
+
+	{{ember-particles class='login__particles'
+		options=(ember-particles-options
+			'particles.number.value' 60
+			'particles.number.density.enable' true
+			'particles.move.straight' true
+			'particles.size.value' 10
+			'particles.size.anim.enable' true
+			'interactivity.events.onclick.enable' false
+		)}}
 
 	{{outlet}}
 </div>

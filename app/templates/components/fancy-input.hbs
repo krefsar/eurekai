@@ -1,0 +1,9 @@
+{{#if isEditing}}
+	{{input value=value onChange=(action onChange)}}
+{{else}}
+	<div class='fancy-input__value'>
+		{{value}}
+	</div>
+{{/if}}
+
+{{yield}}

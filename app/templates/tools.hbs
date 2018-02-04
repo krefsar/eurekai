@@ -1,9 +1,13 @@
-<div class='tools__container'>
-	<header class='tools__header layout-row layout-align-space-between-center'>
-		<h1 class='header__logo'>eurek.AI</h1>
+<div class='tools__container layout-column'>
+	<header class='tools__header layout-row layout-align-space-between-center' data-action-bar='back-to-header'>
+		{{#link-to 'index'}}
+			<h1 class='header__logo'>eurek.AI</h1>
+		{{/link-to}}
 
 		{{fa-icon 'user' class='header__profile'}}
 	</header>
 
-	{{outlet}}
+	<div class='flex'>
+		{{liquid-outlet}}
+	</div>
 </div>

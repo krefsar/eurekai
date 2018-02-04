@@ -17,5 +17,15 @@
 		Tool 4
 	{{/swiper-slide}}
 {{/swiper-container}}
+	
+	{{ember-particles class='login__particles'
+		options=(ember-particles-options
+			'particles.number.value' 60
+			'particles.number.density.enable' true
+			'particles.move.straight' true
+			'particles.size.value' 10
+			'particles.size.anim.enable' true
+			'interactivity.events.onclick.enable' false
+		)}}
 
 {{outlet}}
